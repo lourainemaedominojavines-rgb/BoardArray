@@ -31,7 +31,7 @@ class BoardArray : public Board {
                     for(int j = index; j > i; j--){
                         array[j] = array[j - 1];
                     }
-                    array[i] = *entry;
+                    array[j] = *entry;
                 }
                 */
                 
