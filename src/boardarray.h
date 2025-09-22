@@ -33,7 +33,7 @@ class BoardArray : public Board {
                 return;
             }
 
-            
+
 
             if (pos == -1) {
                 pos = index;
@@ -45,6 +45,10 @@ class BoardArray : public Board {
                 limit = index;
             } else {
                 limit = SIZE - 1;
+            }
+
+            for (int i = limit; i > pos; i--) {
+                array[i] = array[i - 1];
             }
  
 
