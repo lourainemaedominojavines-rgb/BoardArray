@@ -23,7 +23,7 @@ class BoardArray : public Board {
                 Entry current = array[i];
 
                 if(variable > current){
-
+                    // ayh jusko 
                 }
 
 
