@@ -22,7 +22,7 @@ class BoardArray : public Board {
                 array[i] = array->compare(entry);
                 Entry current = array[i];
 
-                if( > current){
+                if(variable > current){
 
                 }
 
