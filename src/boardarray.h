@@ -17,27 +17,19 @@ class BoardArray : public Board {
             // TODO: IMPLEMENT THIS FUNCTION
             // ALGORITHM IS PROVIDED IN INSTRUCTIONS.TXT
 
+            int pos = 01;
+
             for(int i = 0; i < index; i++){
-                Entry existing = array[i];
-                array[i] = array->compare(entry);
-                Entry current = array[i];
-
-                if(variable > current){
-                    // ayh jusko 
+                if(entry->compare(&array[i])){
+                    pos = i;
+                    break;
                 }
-
-
-                /*if(array[i.compare] > array[i]){
-                    for(int j = index; j > i; j--){
-                        array[j] = array[j - 1];
-                    }
-                    array[j] = *entry;
-                }
-                */
-                
             }
-           
-            return;
+
+            
+            
+            
+            
         }
 
         void print() {
