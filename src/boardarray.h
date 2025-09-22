@@ -33,13 +33,10 @@ class BoardArray : public Board {
                 return;
             }
 
-
-            for (int i = 0; i < index; i++) {
-                if (entry->compare(&array[i])) {
-                    pos = i;
-                    break;
-                }
-
+            if (pos == -1) {
+                pos = index;
+            }
+ 
 
         
             for (int i = index - 1; i > pos; i--) {
