@@ -17,7 +17,7 @@ class BoardArray : public Board {
             // TODO: IMPLEMENT THIS FUNCTION
             // ALGORITHM IS PROVIDED IN INSTRUCTIONS.TXT
 
-            int pos = 01;
+            int pos = -1;
 
             for(int i = 0; i < index; i++){
                 if(entry->compare(&array[i])){
@@ -26,14 +26,36 @@ class BoardArray : public Board {
                 }
             }
 
+
+
             if (index == SIZE && !entry->compare(&array[index - 1])) {
                 cout << entry->name << "'s score is too low to be added!" << endl;
                 return;
             }
 
 
+            for (int i = 0; i < index; i++) {
+                if (entry->compare(&array[i])) {
+                    pos = i;
+                    break;
+                }
+
+
+        
+            for (int i = index - 1; i > pos; i--) {
+                array[i] = array[i - 1];
+            }
             
-            
+            array[pos] = *entry;
+
+            if (index < SIZE) {
+                index++;
+            }
+           
+    }
+
+
+
             
         }
 
